@@ -138,3 +138,65 @@ jsp:forward는 현재 페이지에서 다른 페이지로 이동할 때 사용�
 ![image](https://user-images.githubusercontent.com/104752580/234441270-41c0d0f0-fda1-4deb-bf3b-81e89e9225c8.png)
 
 ex1.jsp 페이지에 <jsp:include page="ex.jsp">를 사용하여 ex1.jsp 페이지에서 ex.jsp 페이지로 이동한 것이다.
+## 7. jsp 주석
+jsp에서 주석 처리는 "<%-- --%>" 이렇게 표현합니다.
+```jsp
+<%-- hello world!! --%>
+<% out.println("hello world!!") %>
+```
+## 8. 서블릿
+서블릿은 jsp와 비슷한 개념으로 동적 웹페이지를 제작할 때 사용되는 자바 기반의 웹 애플리케이션 프로그래밍입니다.
+
+서블릿에 대해서 간단하게 예제를 살펴보겠습니다.
+```servlet
+package test;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/hello")
+public class HelloServlet extends HttpServlet {
+
+	private static final long serialVersionUID = 1L;
+       
+	public HelloServlet() {
+		super();
+	}
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
+    	throws ServletException, IOException {
+		
+		response.setContentType("text/html;charaset=utf-8");
+		PrintWriter out = response.getWriter();
+		out.println("<h1>Hello World!</h1>");
+		out.close();
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
+    	throws ServletException, IOException {		
+		doGet(request, response);
+	}
+}
+```
+![image](https://github.com/hsy0511/jsp-/assets/104752580/a72a597b-1352-4d7a-b22e-cbca759f2742)
+
+hello world!를 보여주는 페이지입니다. 서블릿도 자바기반으로 만들어지는 웹 제작 프로그램인 것을 볼 수 있습니다.
+## 9. 서블릿과 jsp 차이점
+JSP는 클라이언트에 보여지는 결과 페이지를 생성할 때 주로 쓰이며, 서블릿은 UI 요소가 없는 제어나 기타 처리 용도로 쓰인다.
+###### ※ 클라이언트: 네트워크로 연결된 서버로부터 정보를 제공받는 컴퓨터
+###### ※ UI: 사용자가 사용하는 서비스나 제품의 화면 안에 모든 것을 의미
+![image](https://github.com/hsy0511/jsp-/assets/104752580/54ca583c-53d2-4d2a-b0eb-7c604ec12f15)
+###### ※ 컨트롤러: 사용자와 응용 프로그램 간의 중재자 역할
+###### ※ 뷰: 사용자에게 접근이 허용된 자료만을 제한적으로 보여주기 위해 하나 이상의 기본 테이블로부터 유도된, 이름을 가지는 가상 테이블
+## 10. jsp 실행과정
+![image](https://github.com/hsy0511/jsp-/assets/104752580/2e4518d1-2457-4ad1-9a24-d52120c9b9c1)
+
+WAS를 통해서 웹 브라우저의 HTTP 요청에 알맞은 JSP를 실행하고 그 결과를 HTTP 응답으로 웹 브라우저에 전송하게 됩니다.
+###### ※ WAS : 웹 브라우저의 HTTP 요청에 알맞은 JSP를 실행하고 그 결과를 HTTP 응답으로 웹 브라우저에 전송한다.
+## 11. jsp 페이지 기능
+
