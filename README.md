@@ -148,7 +148,7 @@ jsp에서 주석 처리는 "<%-- --%>" 이렇게 표현합니다.
 서블릿은 jsp와 비슷한 개념으로 동적 웹페이지를 제작할 때 사용되는 자바 기반의 웹 애플리케이션 프로그래밍입니다.
 
 서블릿에 대해서 간단하게 예제를 살펴보겠습니다.
-```servlet
+```java
 package test;
 import java.io.IOException;
 import java.io.PrintWriter;
