@@ -1,4 +1,4 @@
-# jsp-
+# jsp-foundation
 # jsp 기초문법
 ## 1. jsp(Java Server Pages)란?
 동적인 웹 페이지를 개발하기 위한 웹 프로그래밍 기술이다.
