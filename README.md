@@ -17,6 +17,8 @@
 	System.out.println("5는 1보다 크다");
 }%>
 ```
+![image](https://github.com/hsy0511/jsp-foundation/assets/104752580/6d00464d-bee3-46d7-982a-9373e35f55f9)
+
 ## 3. jsp 선언부
 선언부는 <%! %>로 사용하고 변수,메소드 등을 선언할때 사용하는 태그
 
@@ -25,6 +27,8 @@
 <%! String name = "홍길동"; %>
 <%! public int plus(int a, int b){ return a+b;} %>
 ```
+![image](https://github.com/hsy0511/jsp-foundation/assets/104752580/a74baceb-f049-4417-a2c2-8dfc873581a6)
+
 ## 4. jsp 표현부
 표현부는 <%= %>로 사용되고 스크릿틀릿과 선언부에서 사용한 문법의 결과를 표현한다.
 
@@ -33,6 +37,8 @@
 <p><%= name %></p>
 <p><%= plus(5,5) %></p>
 ```
+![image](https://github.com/hsy0511/jsp-foundation/assets/104752580/f21a8ff2-c499-40bb-ae89-9b777ecd3dae)
+
 ## 5. jsp 지시어
 jsp 지시문은 서블릿 (동적 웹 페이지를 만들 때 사용되는 자바 기반의 웹 애플리케이션 프로그래밍 기술) 클래스의 전체 구조에 영향을 준고,
 
@@ -99,6 +105,7 @@ pageEncoding은 jsp 파일 작성시의 문자코드를 지정하기 위한 속�
 ![image](https://user-images.githubusercontent.com/104752580/234438425-ee587995-72ac-495e-b332-e0c66f7279eb.png)
 
 ex1.jsp 파일에 <%@ include file="ex.jsp" %>를 하며 ex1.jsp 파일에 ex.jsp 파일을 뿌려넣은 것이다.
+![image](https://github.com/hsy0511/jsp-foundation/assets/104752580/75790663-feb2-4f99-bcd0-326c4b959eea)
 
 ## 6. jsp 액션태그 
 액션태그는 jsp 문서에서 간다하게 다양한 구현을 할 수 있도록 만든 태그이다.
@@ -123,6 +130,8 @@ ex1.jsp 파일에 <%@ include file="ex.jsp" %>를 하며 ex1.jsp 파일에 ex.js
 
 ex1.jsp 페이지에 <jsp:include page="ex.jsp">를 사용하여 ex1.jsp 페이지에 ex.jsp 페이지를 포함한 것이다.
 
+![image](https://github.com/hsy0511/jsp-foundation/assets/104752580/53cb1f51-3363-44d5-a8f4-4af79bd52c1d)
+
 ### 두번째는 jsp:forward이다.
 
 jsp:forward는 현재 페이지에서 다른 페이지로 이동할 때 사용하는 태그이다.
@@ -136,6 +145,9 @@ jsp:forward는 현재 페이지에서 다른 페이지로 이동할 때 사용�
 ![image](https://user-images.githubusercontent.com/104752580/234441270-41c0d0f0-fda1-4deb-bf3b-81e89e9225c8.png)
 
 ex1.jsp 페이지에 <jsp:include page="ex.jsp">를 사용하여 ex1.jsp 페이지에서 ex.jsp 페이지로 이동한 것이다.
+
+![image](https://github.com/hsy0511/jsp-foundation/assets/104752580/41d3154a-5bc6-4685-95f6-2e4a84859639)
+
 ## 7. jsp 주석
 jsp에서 주석 처리는 "<%-- --%>" 이렇게 표현합니다.
 ```jsp
