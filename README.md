@@ -105,6 +105,7 @@ pageEncoding은 jsp 파일 작성시의 문자코드를 지정하기 위한 속�
 ![image](https://user-images.githubusercontent.com/104752580/234438425-ee587995-72ac-495e-b332-e0c66f7279eb.png)
 
 ex1.jsp 파일에 <%@ include file="ex.jsp" %>를 하며 ex1.jsp 파일에 ex.jsp 파일을 뿌려넣은 것이다.
+
 ![image](https://github.com/hsy0511/jsp-foundation/assets/104752580/75790663-feb2-4f99-bcd0-326c4b959eea)
 
 ## 6. jsp 액션태그 
